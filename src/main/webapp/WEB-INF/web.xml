@@ -8,8 +8,22 @@
 
         <servlet>
             <servlet-name>spring</servlet-name>
-            <servlet-class></servlet-class>
+            <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         </servlet>
+        
+        <servlet-class>
+        	<servlet-name>spring</servlet-name>
+        	<url-pattern>*.html</url-pattern>
+        </servlet-class>
+        
+        <context-param>
+        	<param-name>contextConfigLocation</param-name>
+        	<param-value>/WEB-INF/spring-servlet.xml</param-value>
+        </context-param>
+        
+        <listener>
+        	<listener-class>...</listener-class>
+        </listener>
    
     </session-config>
 </web-app>
